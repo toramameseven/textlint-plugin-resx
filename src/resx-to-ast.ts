@@ -105,11 +105,11 @@ export type ParseOptions = {
     debug: boolean;
 }
 
-export function parse(html: string, options?: ParseOptions) {
-    const isDebug = process.env.DEBUG?.startsWith("textlint:html") ?? options?.debug ?? false;
-    const parseHtml = unified().use(rehypeParse)
-    const ast = parseHtml.parse(html);
-    const src = new StructuredSource(html);
+export function parse(resx: string, options?: ParseOptions) {
+    const isDebug = process.env.DEBUG?.startsWith("textlint:resx") ?? options?.debug ?? false;
+    const parseResx = unified().use(rehypeParse)
+    const ast = parseResx.parse(resx);
+    const src = new StructuredSource(resx);
     const tr = traverse(ast);
 
     // console.log("---- Src before mapping ----");
@@ -151,7 +151,7 @@ export function parse(html: string, options?: ParseOptions) {
                 const range = src.locationToRange(positionCompensated);
                 node.loc = positionCompensated;
                 node.range = range;
-                node.raw = html.slice(range[0], range[1]);
+                node.raw = resx.slice(range[0], range[1]);
             }
         }
     });

@@ -1,8 +1,8 @@
 // LICENSE : MIT
 "use strict";
-import HTMLProcessor from "./RESXProcessor.js";
+import RESXProcessor from "./RESXProcessor.js";
 import type { TextlintPluginCreator } from "@textlint/types";
 
 export default {
-    Processor: HTMLProcessor
+    Processor: RESXProcessor
 } as TextlintPluginCreator;

@@ -8,14 +8,6 @@
     "resx",
     "lint"
   ],
-  "homepage": "https://github.com/textlint/textlint-plugin-html",
-  "bugs": {
-    "url": "https://github.com/textlint/textlint-plugin-html/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/textlint/textlint-plugin-html.git"
-  },
   "license": "MIT",
   "author": "xxx",
   "type": "module",

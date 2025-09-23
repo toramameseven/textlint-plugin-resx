@@ -2,7 +2,7 @@
 "use strict";
 import assert from "assert";
 import HTMLPlugin from "../src/index.js"
-// import { parse } from "../src/html-to-ast.js";
+// import { parse } from "../src/resx-to-ast.js";
 
 import { TextlintKernel } from "@textlint/kernel"
 import path from "path";
@@ -13,7 +13,7 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-describe("HTMLProcessor-test", function () {
+describe("RESXProcessor-test", function () {
     describe("HTMLPlugin", function () {
         context("support file extensions", function () {
             it("support {.html, .htm}", async function () {

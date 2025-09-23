@@ -4,7 +4,7 @@ import assert from "assert";
 import fs from "fs";
 import path from "path";
 import { test } from "@textlint/ast-tester";
-import { parse } from "../src/html-to-ast.js";
+import { parse } from "../src/resx-to-ast.js";
 import { fileURLToPath } from "url";
 import type { TxtParentNode } from "@textlint/ast-node-types";
 
@@ -73,7 +73,7 @@ describe.skip("Snapshot testing", () => {
         });
 });
 
-describe.skip("html-to-ast-test", function () {
+describe.skip("resx-to-ast-test", function () {
     it("should return AST that passed isTxtAST", function () {
         const fixture = fs.readFileSync(path.join(__dirname, "fixtures/wikipedia.html"), "utf-8");
         const AST = parse(fixture);
