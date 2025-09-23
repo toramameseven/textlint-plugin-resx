@@ -1,5 +1,5 @@
 // LICENSE : MIT
-import { parse } from "./html-to-ast.js";
+import { parse } from "./resx-to-ast.js";
 export type HTMLProcessorOptions = {
     extensions?: string[];
 }
