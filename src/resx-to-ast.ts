@@ -89,6 +89,7 @@ function mapNodeType(node: RootContent, parent: TraverseContext | undefined) {
             const category = categorizeResource(dataType, dataMimetype, node.value);
             if (parentNode?.type === "Value" && parentparentNode?.type === "Data" && category === 'string') {
                 // TODO: check resouce is text strings.
+                parentNode.type = "Paragraph"; // change Data's child type to Paragraph
                 return nodeTypes[node.type];
             }
         } else {
@@ -155,7 +156,7 @@ export function parse(resx: string, options?: ParseOptions) {
             }
         }
     });
-    console.log("---- AST after mapping ----");
-    console.dir(ast, { depth: null });
+    // console.log("---- AST after mapping ----");
+    // console.dir(ast, { depth: null });
     return ast as any as TxtParentNode;
 }
